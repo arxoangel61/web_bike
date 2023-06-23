@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+
+/* font-family: 'Raleway', sans-serif; */
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(180deg, #FFFFFF 0%, #e0e0e0 100%);
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.none {
+  display: none;
+}
+
+
+/* header */
+
+.header {
+  
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.header__title {
+  
+  display: flex;
+  justify-content: center;
+
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 75px;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+.header__list ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.header__list li {
+  list-style-type: none;
+}
+.header__list a {
+  text-decoration: none;
+}
+
+.header__nav a {
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+@media (max-width: 800px) {
+  .nav-none{
+    display: none;
+  }
+}
+
+@media (max-width: 670px) {
+  .header__list ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .header__list li{
+    margin-bottom: 25px;
+  }
+}
+
+
+
+/* main  */
+
+.main {
+  margin: 0 auto;
+  max-width: 1500px
+}
+
+.grid-container {
+  display: grid;
+  
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+  "bike_1 bake_1 sell_text bike_svg bike_2 bake_2"
+  "bike_1 bake_1 bike_3 bike_3 text_2 text_2"
+  "bike_4 bake_4 bike_3 bike_3 text_3 text_3"
+  "bike_4 bake_4 bike_3 bike_3 helm_svg text_4"
+  "bike_4 bake_4 text_5 text_5 bike_5 bike_5"
+  "text_6 text_6 bike_6 bike_6 bike_5 bike_5"
+  "lebel lebel bike_6 bike_6 text_7 text_7"; 
+}
+
+
+.main__img-1 {
+  grid-area: bike_1;
+  grid-column: 1/3;
+}
+.main__text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__text p {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 170%;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.text-sell {
+  grid-area: sell_text;
+  grid-column: 3/4;
+  background-color: #FFF4DE;
+}
+.main__svg {
+  background-color: #80C7E3;
+
+}
+.bike-svg {
+  grid-area: bike_svg;
+  grid-column: 4/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.main__img-2 {
+  grid-area: bike_2;
+  grid-column: 5/7;
+}
+
+
+
+.text-kit {
+  grid-area: text_2;
+  grid-column: 5/7;
+  background-color: #EC0E44;
+}
+.text-kit p {
+  color: white;
+}
+
+
+.main__img-3 {
+  grid-area: bike_3;
+  grid-column: 3/5;
+}
+
+
+.text-new_col {
+  grid-area: text_3;
+  grid-column: 5/7;
+  background-color: #FFF4DE;
+}
+
+.helm-svg {
+  grid-area: helm_svg;
+  grid-column: 5/6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-disc {
+  grid-area: text_4;
+  grid-column: 6/7;
+  background-color: black;
+}
+.text-disc p {
+  color: white;
+}
+
+.main__img-4 {
+  grid-area: bike_4;
+  grid-column: 1/3;
+}
+
+
+
+.text-disc_2 {
+  grid-area: text_5;
+  grid-column: 3/5;
+  background-color: #EC0E44;
+}
+.text-disc_2 p {
+  color: #fff;
+}
+
+.main__img-5 {
+  grid-area: bike_5;
+  grid-column: 5/7;
+}
+
+.main__img-6 {
+  grid-area: bike_6;
+  grid-column: 3/5;
+}
+
+
+.text-sesson {
+  grid-area: text_6;
+  grid-column: 1/3;
+  background-color: #FFF4DE;
+}
+.text-contacs {
+  grid-area: text_7;
+  grid-column: 5/7;
+  background-color: #80C7E3;
+}
+
+.main__lebel {
+  grid-area: lebel;
+  grid-column: 1/3;
+  background-color: #FFF4DE;
+}
+
+.bike-svg img, .helm-svg img{
+ object-fit: none;
+}
+
+
+/* Tablet */
+@media (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    
+    grid-template-columns: repeat(6, 0.5fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+    "bike_1 bike_1 bike_1 bike_1 sell_text sell_text"
+    "bike_1 bike_1 bike_1 bike_1 bike_svg bike_svg"
+    "text_2 text_2 text_2 text_2 text_2 text_2"
+    "helm_svg helm_svg bike_3 bike_3 bike_3 bike_3"
+    "text_4 text_4 bike_3 bike_3 bike_3 bike_3"
+    "text_7 text_7 bike_3 bike_3 bike_3 bike_3"
+    "text_5 text_5 text_5 text_3 text_3 text_3"
+    "bike_2 bike_2 bike_2 bike_5 bike_5 bike_5"
+    "bike_2 bike_2 bike_2 bike_5 bike_5 bike_5"
+    "text_6 text_6 text_6 text_6 text_6 text_6";
+  }
+  .main__img-1 {
+    grid-area: bike_1;
+    grid-column: 1/5;
+  }
+  .text-sell {
+    grid-area: sell_text;
+    grid-column: 5/7;
+  }
+
+  .bike-svg {
+    grid-area: bike_svg;
+    grid-column: 5/7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-kit {
+    grid-area: text_2;
+    grid-column: 1/7;
+  }
+  .helm-svg {
+    grid-area: helm_svg;
+    grid-column: 1/3;
+  }
+  .text-disc {
+    grid-area: text_4;
+    grid-column: 1/3;
+  }
+  .text-contacs {
+    grid-area: text_7;
+    grid-column: 1/3;
+  }
+
+  .main__img-3 {
+    grid-area: bike_3;
+    grid-column: 3/7;
+  }
+
+  .text-disc_2 {
+    grid-area: text_5;
+    grid-column: 1/4;
+  }
+
+  .text-new_col {
+    grid-area: text_3;
+    grid-column: 4/7;
+  }
+
+  .main__img-2 {
+    grid-area: bike_2;
+    grid-column: 1/4;
+    
+  }
+
+
+  .main__img-5 {
+    grid-area: bike_5;
+    grid-column: 4/7;
+  }
+
+  .text-sesson {
+    grid-area: text_6;
+    grid-column: 1/7;
+  }
+
+  .main__lebel {
+    display: none;
+  }
+  .main__img-4 {
+    display: none;
+  }
+  .main__img-6 {
+    display: none;
+  }
+}
+
+/* phone */
+@media (max-width: 645px) {
+  .grid-container {
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas:
+    "sell_text bike_svg"
+    "bike_1 bike_1"
+    "bike_1 bike_1"
+    "text_2 text_2"
+    "bike_3 helm_svg"
+    "bike_3 text_4"
+    "bike_3 text_7"
+    "text_5 text_5"
+    "text_3 text_3"
+    "bike_2 bike_5"
+    "text_6 text_6";
+  }
+
+  .text-sell {
+    grid-area: sell_text;
+    grid-column: 1/2;
+  }
+
+  .bike-svg {
+    grid-area: bike_svg;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__img-1 {
+    grid-area: bike_1;
+    grid-column: 1/3;
+  }
+  .text-kit {
+    grid-area: text_2;
+    grid-column: 1/3;
+  }
+  .helm-svg {
+    grid-area: helm_svg;
+    grid-column: 2/3;
+  }
+  .text-disc {
+    grid-area: text_4;
+    grid-column: 2/3;
+  }
+  .text-contacs {
+    grid-area: text_7;
+    grid-column: 2/3;
+  }
+
+  .main__img-3 {
+    grid-area: bike_3;
+    grid-column: 1/2;
+  }
+  .text-disc_2 {
+    grid-area: text_5;
+    grid-column: 1/3;
+  }
+
+  .text-new_col {
+    grid-area: text_3;
+    grid-column: 1/3;
+  }
+  .main__img-2 {
+    grid-area: bike_2;
+    grid-column: 1/2;
+  }
+  .main__img-5 {
+    grid-area: bike_5;
+    grid-column: 2/3;
+  }
+
+  .text-sesson {
+    grid-area: text_6;
+    grid-column: 1/3;
+  }
+}
+
+/* footer */
+
+.footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: 
+  "nav nav cont cont info info";
+
+}
+.footer__more {
+  grid-area: nav;
+}
+.footer__more ul {
+  margin: 0;
+  padding: 0;
+}
+.footer__more li {
+  margin-bottom: 20px;
+}
+.footer__item {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #5A5A5A;
+}
+.footer__social {
+  grid-area: cont;
+}
+.footer__social ul {
+  margin: 0;
+  padding: 0;
+}
+.footer__social li {
+  margin-bottom: 20px;
+}
+
+.footer__info {
+  grid-area: info;
+}
+
+.footer__info p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 800px) { 
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "nav cont"
+    "info info";
+  
+  }
+  .footer__more, .footer__social, .footer__info {
+    margin-left: 30px;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    "nav"
+    "cont"
+    "info";
+  }
+  .footer__more, .footer__info, .footer__social {
+    text-align: center;
+    margin-left: 0;
+  }
+  .item-text {
+    text-transform: none;
+  }
+
+}
